@@ -39,3 +39,8 @@ jobs:
     steps:
       - name: if trigger procesor
         run: echo Triggnul mě "${{ github.triggering_actor }}"
+  secret:
+    runs-on: ubuntu-latest
+    steps:
+      - name: vypis secret
+        run: echo $MY_NAME
