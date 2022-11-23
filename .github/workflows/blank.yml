@@ -31,4 +31,4 @@ jobs:
       - name: need job2
         run: |
           echo Nespustim se dokud nedobehne pole 
-          echo ${{ need_job2.needs }}
+          echo ${{ job.need_job2.needs }}
