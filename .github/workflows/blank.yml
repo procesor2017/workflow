@@ -31,4 +31,4 @@ jobs:
       - name: need job2
         run: |
           echo Nespustim se dokud nedobehne pole 
-          echo "${{ needs.need_job2.outputs.build_id }}"
+          echo ${{ needs.need_job2.outputs.build_id }}
