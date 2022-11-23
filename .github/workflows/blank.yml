@@ -32,3 +32,10 @@ jobs:
         run: |
           echo Nespustim se dokud nedobehne pole 
           echo "${{ toJSON(needs) }}"
+  need_job3:
+    if: ${{ github.triggering_actor == "procesor2017" }}
+    needs: need_job2
+    runs-on: ubuntu-latest
+    steps:
+      - name: if trigger procesor
+        run: echo Triggnul mě "${{ github.triggering_actor }}"
