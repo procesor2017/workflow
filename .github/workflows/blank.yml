@@ -29,4 +29,6 @@ jobs:
     runs-on:  ubuntu-latest
     steps:
       - name: need job2
-        run: echo Nespustim se dokud nedobehne pole ${{ needs.need_job2.outputs }}
+        run: |
+          echo Nespustim se dokud nedobehne pole 
+          echo "${{ needs.need_job2.outputs.build_id }}"
