@@ -18,3 +18,9 @@ jobs:
         run: |
           echo Ahoj,
           echo vsemocny svete
+  need_job:
+    needs: ahoj_svete
+    runs-on:  ubuntu-latest
+    steps:
+      - name: need job
+        run: echo Nespustim se dokud nedobehne ahoj_svete
