@@ -24,3 +24,9 @@ jobs:
     steps:
       - name: need job
         run: echo Nespustim se dokud nedobehne ahoj_svete
+  need_job2:
+    needs: [check-bats-version, ahoj_svete, need_job]
+    runs-on:  ubuntu-latest
+    steps:
+      - name: need job2
+        run: echo Nespustim se dokud nedobehne pole ${{ needs }}
