@@ -41,6 +41,11 @@ jobs:
         run: echo Triggnul mě "${{ github.triggering_actor }}"
   secret:
     runs-on: ubuntu-latest
+    env:
+      NAME: ${{ secrets.MY_NAME }}
+      PROMENA: BATMAN
     steps:
       - name: vypis secret
-        run: echo ${{ secrets.MY_NAME }}
+        run: | 
+          echo $BATMAN
+          echo $NAME
